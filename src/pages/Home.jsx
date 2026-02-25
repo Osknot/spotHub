@@ -1,10 +1,10 @@
 export const HomePage = () => {
     return (
-        <div className="p-8">
+        <div className="p-8 pt-[68px]  gap-4 min-h-screen">
             <h1 className="text-4xl font-bold mb-4">Let's spotHub your business: Brand it, Design it, Automate it, Build it – So smart, you deserve that.</h1>
             <p className="mb-8">Your hub for graphics, web design, and AI automation.</p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3">
                 {/* Widget Pictures - Replace src with actual URLs or assets */}
                 <div>
                 <h2 className="text-2xl">AI Chatbot Widget</h2>
@@ -22,6 +22,7 @@ export const HomePage = () => {
                 <p>Create stunning visuals effortlessly.</p>
                 </div>
             </div>
+
         </div>
   );
 }

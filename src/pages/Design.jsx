@@ -1,5 +1,10 @@
 export const DesignPage = () => {
     return(
-        <div>This is the design page</div>
+        <div>
+            <h2>Let's design your spot</h2>
+            <section>
+                holds web and graphic designs here
+            </section>
+        </div>
     )
 }
