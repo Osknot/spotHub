@@ -1,4 +1,6 @@
-import essy from "../assets/check.png";
+import essy from "../assets/automation.png";
+import growth from "../assets/growth.png";
+import creative from "../assets/creative.png";
 import { Footer } from "../components/Footer";
 import { ChevronDown } from "lucide-react"; // Import the icon
 import { motion } from "framer-motion";
@@ -8,7 +10,7 @@ export const HomePage = () => {
     return (
         <div className="relative min-h-screen pt-[90px] px-6 bg-[#0B0F19] text-[#F9FAFB] overflow-x-hidden">
 
-             {/* Global Background Glow 
+             {/* Global Background Glow
              <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[120px] rounded-full"></div>
                 <div className="absolute inset-0 -z-10">
                     <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[140px] rounded-full"></div>
@@ -19,11 +21,11 @@ export const HomePage = () => {
 
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
                     <span className="block text-gray-300">
-                    Let’s
+                    
                     </span>
 
                     <span className="block bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-                    <span className="text-white">spot</span>Hub/&gt; your business
+                    <span className="text-white">Elevate your brand with visually intelligent systems</span> 
                     </span>
 
                     <span className="block text-gray-300 mt-4 text-2xl md:text-3xl font-semibold">
@@ -31,7 +33,7 @@ export const HomePage = () => {
                     </span>
 
                     <span className="block mt-4 text-lg md:text-xl text-gray-400 font-normal">
-                    So smart, you deserve that.
+                    Smart solutions designed for the modern entrepreneur
                     </span>
                 </h1>
 
@@ -80,7 +82,7 @@ export const HomePage = () => {
                                 Our Digital Solutions
                         </h2>
                         <p className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
-                                We build powerful brands, websites, and automation systems that scale.
+                                {/*We build powerful brands, websites, and automation systems that scale.*/}
                          </p>
                             </div>
 
@@ -98,11 +100,11 @@ export const HomePage = () => {
                                                 </div>
 
                                                 <h3 className="text-2xl font-semibold mt-6 group-hover:text-blue-400 transition">
-                                                AI Chatbot Widget
+                                                Smart Automation
                                                 </h3>
 
                                                 <p className="text-gray-400 leading-relaxed mt-3">
-                                                Engage customers 24/7 with intelligent automation systems that convert visitors into clients.
+                                                Reclaim your time. We build intelligent workflows and AI assistants that handle repetitive tasks, so you can focus on high-level strategy.
                                                 </p>
 
                                             </div>
@@ -112,18 +114,18 @@ export const HomePage = () => {
 
                                                 <div className="overflow-hidden rounded-xl border border-[#1F2937]">
                                                 <img 
-                                                    src={essy} 
+                                                    src={growth} 
                                                     alt="CRM Dashboard" 
                                                     className="w-full transition duration-700 group-hover:scale-105"
                                                 />
                                                 </div>
 
                                                 <h3 className="text-2xl font-semibold mt-6 group-hover:text-purple-400 transition">
-                                                CRM Dashboard
+                                                Growth Infrastructure
                                                 </h3>
 
                                                 <p className="text-gray-400 leading-relaxed mt-3">
-                                                Manage leads, automate workflows, and scale your business with smart systems.
+                                                Foundations built to scale. From custom CRMs to robust web platforms, we provide the digital architecture your business needs to expand.
                                                 </p>
 
                                             </div>
@@ -133,18 +135,18 @@ export const HomePage = () => {
 
                                                 <div className="overflow-hidden rounded-xl border border-[#1F2937]">
                                                 <img 
-                                                    src={essy} 
+                                                    src={creative} 
                                                     alt="Graphic Design" 
                                                     className="w-full transition duration-700 group-hover:scale-105"
                                                 />
                                                 </div>
 
                                                 <h3 className="text-2xl font-semibold mt-6 group-hover:text-pink-400 transition">
-                                                Graphic Design Tool
+                                                Creative Branding
                                                 </h3>
 
                                                 <p className="text-gray-400 leading-relaxed mt-3">
-                                                Create stunning visuals and branding assets that make your business unforgettable.
+                                                Design that demands attention. We craft premium visual identities and assets that turn first impressions into lasting brand loyalty.
                                                 </p>
 
                                             </div>
@@ -153,6 +155,17 @@ export const HomePage = () => {
                                         </div>
                              </section>
 
+                            <section className="py-20 text-center">
+                                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                                    Ready to elevate your business?
+                                </h2>
+                                <p className="text-gray-400 mb-8">
+                                    Let’s build something powerful together.
+                                </p>
+                                <button className="px-8 py-3 bg-blue-600 hover:bg-blue-500 transition rounded-xl font-semibold">
+                                    Start Your Project
+                                </button>
+                            </section>
                 <Footer />  
                 </div>
              );

@@ -14,14 +14,17 @@
 
 
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import myself from '../assets/myself.png'; // Placeholder image, replace with actual design work
+import { motion } from 'framer-motion';
+import hos from "../assets/hos.JPG"; // Placeholder image for brand portfolio items
+import myport from "../assets/myport.JPG";
+import farmty from "../assets/farmty.JPG";
+import limits from "../assets/limits.JPG";
 
 const portfolioItems = [
-  { title: "Neo-Brutalism UI", category: "Web Design", size: "col-span-2 row-span-2", img: "../assets/myself.png" },
-  { title: "Ethereal Logos", category: "Branding", size: "col-span-1 row-span-1", img: "url_to_work" },
-  { title: "Glassmorphic Apps", category: "Mobile", size: "col-span-1 row-span-2", img: "url_to_work" },
-  { title: "3D Abstract Art", category: "Graphics", size: "col-span-1 row-span-1", img: "url_to_work" },
+  { title: "Health UI", category: "Web Design", size: "col-span-2 row-span-2", img: hos },
+  { title: "Ethereal Logos", category: "Branding", size: "col-span-1 row-span-1", img: limits },
+  { title: "Glassmorphic Apps", category: "Mobile View", size: "col-span-1 row-span-2", img: myport },
+  { title: "Green Art", category: "Graphics", size: "col-span-1 row-span-1", img: farmty },
 ];
 
 const trends = ["Glassmorphism", "Bentogrid", "Micro-interactions", "Grainy Gradients", "Dark Mode First"];
@@ -30,7 +33,7 @@ export const DesignPage = () => {
   return (
     <div className="bg-[#05070A] text-white min-h-screen">
       
-      {/* 1. THE TREND TICKER (Visual Interest) */}
+      {/* 1. THE TREND TICKER */}
       <div className="py-4 border-b border-white/5 overflow-hidden flex whitespace-nowrap bg-blue-600/5">
         <motion.div 
           animate={{ x: [0, -1000] }} 
@@ -54,11 +57,11 @@ export const DesignPage = () => {
             </p>
           </div>
           <button className="px-8 py-4 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform">
-            Start a Project
+            You in good hands
           </button>
         </div>
 
-        {/* 2. THE PORTFOLIO BENTO GRID */}
+        {/* 2. THE PORTFOLIO BENTO GRID - Updated with Image Support */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
           {portfolioItems.map((item, idx) => (
             <motion.div
@@ -66,17 +69,26 @@ export const DesignPage = () => {
               whileHover={{ y: -10 }}
               className={`${item.size} group relative overflow-hidden rounded-[2rem] bg-[#0F1219] border border-white/10`}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+              {/* Overlay Content (Title & Category) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-20 opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end pointer-events-none">
                 <span className="text-blue-400 text-sm font-mono mb-2 uppercase tracking-widest">{item.category}</span>
                 <h3 className="text-2xl font-bold">{item.title}</h3>
               </div>
-              {/* Image Placeholder */}
-              <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 group-hover:scale-110 transition-transform duration-500"/>
+
+              {/* The Image Tag */}
+              <img 
+                src={item.img} 
+                alt={item.title} 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 z-0"
+              />
+
+              {/* Fallback Gradient (keeps the look if image is missing) */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-800/20 to-gray-900/20 z-10"/>
             </motion.div>
           ))}
         </div>
 
-        {/* 3. INTERACTIVE SECTION: "The Playground" */}
+        {/* 3. INTERACTIVE SECTION */}
         <section className="mt-32">
           <div className="p-1 border border-white/10 rounded-3xl bg-gradient-to-b from-white/5 to-transparent">
              <div className="bg-[#05070A] rounded-[calc(1.5rem-1px)] p-12 text-center">

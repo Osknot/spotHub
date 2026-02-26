@@ -20,30 +20,30 @@ import third from "../assets/third.JPG";
 
 const brands = [
   {
-    name: "AUREA",
-    type: "Luxury Skincare",
-    strategy: "Positioning through 'Silent Luxury'—focusing on minimalism and high-end typography.",
-    visuals: "Gold leaf accents, serif typography, and expansive negative space.",
-    color: "bg-[#D4AF37]",
-    vibe: "Sophisticated",
+    name: "TOPCARE",
+    type: "Pediatric Healthcare",
+    strategy: "Focusing on 'Empathetic Professionalism'—balancing clinical excellence with a warm, approachable atmosphere to reduce parent anxiety.",
+    visuals: "Soft rounded geometry, a calming pastel palette with safety-blue accents, and playful custom iconography.",
+    color: "bg-[#4A90E2]",
+    vibe: "Compassionate",
     image: hospi // Add your image path here
   },
   {
-    name: "NEO-FLUX",
-    type: "Tech SaaS",
-    strategy: "Humanizing complex AI through soft gradients and approachable, rounded shapes.",
-    visuals: "Cyber-lime accents, dark mode interface, and fluid motion paths.",
-    color: "bg-[#32CD32]",
-    vibe: "Futuristic",
+    name: "GOLDEN HARVEST",
+    type: "Organic Agriculture",
+    strategy: "Emphasizing 'Farm-to-Table Transparency'—connecting urban consumers to heritage farming through authentic storytelling.",
+    visuals: "Deep forest greens, sun-drenched amber tones, and raw, high-contrast photography of soil and produce.",
+    color: "bg-[#DAA520]",
+    vibe: "Bountiful",
     image: farm // Add your image path here
   },
   {
-    name: "ROOT|SOUL",
-    type: "Lifestyle/Wellness",
-    strategy: "Building community trust using organic textures and an earthy color palette.",
-    visuals: "Hand-drawn illustrations, earthy clay tones, and recycled paper textures.",
-    color: "bg-[#8B4513]",
-    vibe: "Grounded",
+    name: "DOXA ART",
+    type: "Personal Creative Brand",
+    strategy: "Defining the 'Artist as Architect'—showcasing the structural logic and philosophical depth behind abstract creative works.",
+    visuals: "Monochromatic high-fashion aesthetics, stark brutalist layouts, and experimental kinetic typography.",
+    color: "bg-[#1A1A1A]",
+    vibe: "Avant-Garde",
     image: third // Add your image path here
   }
 ];
