@@ -48,7 +48,7 @@ export const AutomatePage = () => {
           transition={{ duration: 1 }}
         >
           <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
-            Your business has to be <span className="text-blue-500">smarter.</span>
+            Your spot has to be <span className="text-blue-500">smarter.</span>
           </h2>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
             Stop doing $10/hr tasks. We build AI-driven systems that scale your 
