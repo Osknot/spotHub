@@ -58,7 +58,7 @@ export const Footer = ()=>{
 
                                         {/* Bottom Section */}
                                         <div className="mt-16 pt-8 border-t border-[#1F2937] text-center text-gray-500 text-sm">
-                                        © {new Date().getFullYear()} spotHub. All rights reserved.
+                                        © {new Date().getFullYear()} spotHub/&gt;. All rights reserved.
                                         <div className="mt-2">
                                             Designed & Built with precision.
                                         </div>

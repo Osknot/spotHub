@@ -15,10 +15,11 @@
 import { motion } from 'framer-motion';
 
 const integrations = [
-  { tech: "Frontend", tools: "React / Next.js", role: "The interactive face of your business." },
-  { tech: "Database", tools: "PostgreSQL / Supabase", role: "Secure, scalable storage for user data." },
-  { tech: "CRM", tools: "HubSpot / Salesforce", role: "Managing relationships and lead flow." },
-  { tech: "Email", tools: "Postmark / Resend", role: "Automated, transactional communication." }
+  { tech: "Frontend", tools: "Brand Experience", role: "A high-speed, pixel-perfect interface that turns visitors into believers." },
+  { tech: "Database", tools: "The Brain Trust", role: "A secure, organized vault for your business intelligence and user profiles." },
+  { tech: "CRM", tools: "The Sales Engine", role: "A hands-free system that captures, scores, and nurtures every single lead." },
+  { tech: "Email", tools: "The Growth Loop", role: "Automated touchpoints that keep your brand top-of-mind without you lifting a finger." },
+  { tech: "AI/Bots", tools: "The Digital Workforce", role: "Intelligent systems that handle customer support, data analysis, and even content creation." },
 ];
 
 export const BuildPage = () => {
@@ -111,11 +112,7 @@ export const BuildPage = () => {
       {/* 4. THE TECH STACK STRIP */}
       <section className="py-20 border-t border-white/5 opacity-50 grayscale hover:grayscale-0 transition-all">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 text-sm font-mono tracking-widest">
-            <span>TYPESCRIPT</span>
-            <span>NEXT.JS</span>
-            <span>STRIPE</span>
-            <span>AWS</span>
-            <span>OPENAI</span>
+            © {new Date().getFullYear()} spotHub/&gt;. All rights reserved.
         </div>
       </section>
     </div>

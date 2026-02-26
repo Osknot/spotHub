@@ -97,6 +97,13 @@ export const DesignPage = () => {
           </div>
         </section>
       </main>
+
+      {/* 4. THE TECH STACK STRIP */}
+      <section className="py-20 border-t border-white/5 opacity-50 grayscale hover:grayscale-0 transition-all">
+        <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 text-sm font-mono tracking-widest">
+            © {new Date().getFullYear()} spotHub/&gt;. All rights reserved.
+        </div>
+      </section>
     </div>
   );
 };
