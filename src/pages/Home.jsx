@@ -1,21 +1,23 @@
 import essy from "../assets/check.png";
 import { Footer } from "../components/Footer";
-
+import { ChevronDown } from "lucide-react"; // Import the icon
+import { motion } from "framer-motion";
 
 
 export const HomePage = () => {
     return (
         <div className="relative min-h-screen pt-[90px] px-6 bg-[#0B0F19] text-[#F9FAFB] overflow-x-hidden">
 
-             {/* Global Background Glow */}
+             {/* Global Background Glow 
              <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[120px] rounded-full"></div>
                 <div className="absolute inset-0 -z-10">
                     <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[140px] rounded-full"></div>
-                </div>
+                </div>*/}
 
-            <div className="relative z-10 max-w-5xl mx-auto text-center py-28">
+            <div className="relative z-10 max-w-5xl mx-auto text-center py-28 min-h-screen flex flex-col justify-center">
 
-                <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+
+                    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
                     <span className="block text-gray-300">
                     Let’s
                     </span>
@@ -36,6 +38,32 @@ export const HomePage = () => {
                 <p className="mt-8 text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
                     Your hub for graphics, web design, and AI automation.
                 </p>
+
+                {/* --- ADD THIS BLOCK BELOW --- */}
+                   <div 
+                            className="absolute bottom-24 left-1/2 -translate-x-1/2 cursor-pointer flex flex-col items-center gap-3 group"
+                            onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+                        >
+                            <span className="text-[10px] uppercase tracking-[0.4em] text-blue-400/60 group-hover:text-blue-400 transition-all">
+                                Explore
+                            </span>
+                            
+                            <motion.div
+                                animate={{ 
+                                    y: [0, 8, 0],
+                                    opacity: [0.5, 1, 0.5] 
+                                }}
+                                transition={{ 
+                                    duration: 2, 
+                                    repeat: Infinity, 
+                                    ease: "easeInOut" 
+                                }}
+                                className="text-blue-500 group-hover:text-blue-300"
+                            >
+                                <ChevronDown size={30} strokeWidth={1.5} />
+                            </motion.div>
+                        </div>
+                {/* --- END OF BLOCK --- */}
 
             </div>
             
