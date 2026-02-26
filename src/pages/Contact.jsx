@@ -67,19 +67,38 @@ export const ContactForm =()=>{
         message: ""
     })
 
+    const [status, setStatus] = useState('');
+
     const handleChange = (e) => setFormData({
         ...formData, 
         [e.target.name]: e.target.value
     });
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(formData)
-        setFormData({
-            name: "",
-            email: "",
-            message: ""
-        })
+    const handleSubmit = async(e) => {
+        e.preventDefault();
+        setStatus("Sending...");
+    try {
+            const res = await fetch("https://osknot3.app.n8n.cloud/webhook/9d35285e-295f-4dae-8b39-864717ea247c", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (!res.ok) throw new Error("Failed to send");
+
+            setStatus("Thank you for contacting me 😉");
+            setFormData({ name: "", email: "", message: ""});
+        } catch (err) {
+            console.error(err);
+            setStatus("Something went wrong ❌");
+        }
+
+         setTimeout(() => {
+                setStatus('');
+                setFormData({ name: "", email: "", message: ""});
+            }, 3000);
     }
 
     return(
@@ -120,7 +139,7 @@ export const ContactForm =()=>{
             >
                 Send Message
             </button>
-
+            <p className="text-center">{status}</p>
         </form>
     )
 }
@@ -154,7 +173,7 @@ export const ContactPage = () =>{
             <ContactCardPicture 
                 src={ini} 
                 name="Iniobong" 
-                about="Graphics Designer • Web Developer • Automation Strategist"
+                about="Software Developer • AI Automations Specialist • Amongst others😉"
                 socialLinks={{ 
                     linkedin: "https://www.linkedin.com/in/esse-profile-name", 
                     twitter: "https://twitter.com/esse-handle" 
@@ -164,7 +183,7 @@ export const ContactPage = () =>{
             <ContactCardPicture 
                 src={esse} 
                 name="Esse"
-                about="Creative Director • Brand Architect • Visual Storyteller"
+                about="Creative Designer • Brand Architect • Visual Storyteller"
                 socialLinks={{ 
                     linkedin: "https://www.linkedin.com/in/esse-profile-name", 
                     twitter: "https://twitter.com/esse-handle" 

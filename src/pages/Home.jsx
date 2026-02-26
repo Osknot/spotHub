@@ -16,7 +16,7 @@ export const HomePage = () => {
             <div className="relative z-10 max-w-5xl mx-auto text-center py-28">
 
                 <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-                    <span className="block text-gray-200">
+                    <span className="block text-gray-300">
                     Let’s
                     </span>
 
