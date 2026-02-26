@@ -76,7 +76,7 @@ export const HomePage = () => {
 
                     {/* Section Header */}
                     <div className="text-center mb-16">
-                         <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-blue-200 to-blue-500 bg-clip-text text-transparent">
+                         <h2 className="text-4xl h-[60px] md:text-5xl font-bold bg-gradient-to-r from-white via-blue-200 to-blue-500 bg-clip-text text-transparent">
                                 Our Digital Solutions
                         </h2>
                         <p className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">

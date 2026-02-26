@@ -12,8 +12,11 @@
 }*/
 
 
-
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import farm from "../assets/farm.JPG"; // Placeholder image for brand portfolio items
+import hospi from "../assets/hospi.JPG";
+import third from "../assets/third.JPG";
 
 const brands = [
   {
@@ -22,7 +25,8 @@ const brands = [
     strategy: "Positioning through 'Silent Luxury'—focusing on minimalism and high-end typography.",
     visuals: "Gold leaf accents, serif typography, and expansive negative space.",
     color: "bg-[#D4AF37]",
-    vibe: "Sophisticated"
+    vibe: "Sophisticated",
+    image: hospi // Add your image path here
   },
   {
     name: "NEO-FLUX",
@@ -30,15 +34,17 @@ const brands = [
     strategy: "Humanizing complex AI through soft gradients and approachable, rounded shapes.",
     visuals: "Cyber-lime accents, dark mode interface, and fluid motion paths.",
     color: "bg-[#32CD32]",
-    vibe: "Futuristic"
+    vibe: "Futuristic",
+    image: farm // Add your image path here
   },
   {
-    name: "ROOT & SOUL",
+    name: "ROOT|SOUL",
     type: "Lifestyle/Wellness",
     strategy: "Building community trust using organic textures and an earthy color palette.",
     visuals: "Hand-drawn illustrations, earthy clay tones, and recycled paper textures.",
     color: "bg-[#8B4513]",
-    vibe: "Grounded"
+    vibe: "Grounded",
+    image: third // Add your image path here
   }
 ];
 
@@ -69,7 +75,7 @@ export const BrandPage = () => {
         </motion.div>
       </section>
 
-      {/* 2. BRAND PHILOSOPHY GRID (Now positioned as the "Why") */}
+      {/* 2. BRAND PHILOSOPHY GRID */}
       <section className="py-24 px-6 border-y border-white/5 bg-[#080A0F]/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
@@ -95,7 +101,7 @@ export const BrandPage = () => {
         </div>
       </section>
 
-      {/* 3. BRAND PORTFOLIO - The "Result" */}
+      {/* 3. BRAND PORTFOLIO */}
       <section className="px-6 py-40 max-w-7xl mx-auto">
         <div className="space-y-48">
           {brands.map((brand, index) => (
@@ -106,19 +112,30 @@ export const BrandPage = () => {
               viewport={{ once: true, amount: 0.3 }}
               className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-16 md:gap-24`}
             >
-              {/* Visual Preview with a "Float" effect */}
+              {/* Visual Preview - Now with Image Support */}
               <motion.div 
                 whileHover={{ scale: 1.02 }}
                 className="w-full md:w-3/5 aspect-[16/10] relative group overflow-hidden rounded-[2.5rem] bg-[#111] border border-white/10 shadow-2xl"
               >
-                <div className={`absolute inset-0 opacity-10 group-hover:opacity-30 transition-opacity duration-700 ${brand.color}`} />
-                <div className="absolute inset-0 flex items-center justify-center">
-                   <h3 className="text-5xl md:text-7xl font-black tracking-[0.2em] opacity-20 group-hover:opacity-100 group-hover:tracking-[0.3em] transition-all duration-700">
+                {/* 1. The Image Background */}
+                <img 
+                  src={brand.image} 
+                  alt={brand.name}
+                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-700"
+                />
+
+                {/* 2. The Color Overlay (Maintains your original hover effect) */}
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700 ${brand.color}`} />
+                
+                {/* 3. The Text Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                   <h3 className="text-5xl md:text-7xl font-black tracking-[0.2em] opacity-40 group-hover:opacity-100 group-hover:tracking-[0.3em] transition-all duration-700 pointer-events-none">
                     {brand.name}
                    </h3>
                 </div>
+
                 {/* Decorative corner element */}
-                <div className="absolute top-8 right-8 w-12 h-12 border-t border-r border-white/20 rounded-tr-xl" />
+                <div className="absolute top-8 right-8 w-12 h-12 border-t border-r border-white/20 rounded-tr-xl z-10" />
               </motion.div>
 
               {/* Text Content */}
@@ -147,12 +164,12 @@ export const BrandPage = () => {
       {/* 4. FINAL FOOTER-STYLE CTA */}
       <section className="py-40 text-center border-t border-white/5">
         <h2 className="text-3xl font-bold mb-8">Ready to define your visual legacy?</h2>
-        <button className="bg-white text-black font-bold px-12 py-4 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
+        <Link to="/contact" className="bg-white text-black font-bold px-12 py-4 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
           Start Your Project
-        </button>
+        </Link>
       </section>
 
-      {/* 4. THE TECH STACK STRIP */}
+      {/* 5. THE TECH STACK STRIP */}
       <section className="py-20 border-t border-white/5 opacity-50 grayscale hover:grayscale-0 transition-all">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 text-sm font-mono tracking-widest">
             © {new Date().getFullYear()} spotHub/&gt;. All rights reserved.

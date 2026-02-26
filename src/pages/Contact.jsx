@@ -48,7 +48,7 @@ export const ContactCardPicture = ({src, name, about, socialLinks}) => {
                 rel="noopener noreferrer"
                 >
                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0B0F19] border border-[#1F2937] transition duration-300 group-hover/icon:border-blue-500 group-hover/icon:shadow-[0_0_20px_rgba(37,99,235,0.5)]">
-                    <i className="fab fa-twitter text-gray-400 group-hover/icon:text-blue-400 transition"></i>
+                    <i className="fab fa-facebook text-gray-400 group-hover/icon:text-blue-400 transition"></i>
                     </div>
                 </a>
 
@@ -77,8 +77,10 @@ export const ContactForm =()=>{
     const handleSubmit = async(e) => {
         e.preventDefault();
         setStatus("Sending...");
+        {/* Send form data to n8n webhook */}
+    const webhookUrl = import.meta.env.VITE_N8N_WEBHOOK_URL;
     try {
-            const res = await fetch("https://osknot3.app.n8n.cloud/webhook/9d35285e-295f-4dae-8b39-864717ea247c", {
+            const res = await fetch(webhookUrl, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -117,7 +119,7 @@ export const ContactForm =()=>{
             <input 
                 type="email" 
                 name="email" 
-                placeholder="Your Email" 
+                placeholder="you@mail.com..." 
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -126,7 +128,7 @@ export const ContactForm =()=>{
 
             <textarea 
                 name="message" 
-                placeholder="Your Message" 
+                placeholder="Your Message..." 
                 value={formData.message}
                 rows={5}
                 onChange={handleChange}
@@ -175,8 +177,8 @@ export const ContactPage = () =>{
                 name="Iniobong" 
                 about="Software Developer • AI Automations Specialist • Amongst others😉"
                 socialLinks={{ 
-                    linkedin: "https://www.linkedin.com/in/esse-profile-name", 
-                    twitter: "https://twitter.com/esse-handle" 
+                    linkedin: "https://www.linkedin.com/in/iniobongoscar", 
+                    twitter: "https://www.facebook.com/share/1GR21ik3i7/?mibextid=wwXIfr" 
     }}
             />
 
@@ -204,7 +206,7 @@ export const ContactPage = () =>{
                     </p>
 
                     <button className="mt-10 bg-blue-600 hover:bg-blue-500 transition px-8 py-4 rounded-xl font-semibold shadow-lg shadow-blue-600/30">
-                        Book a Strategy Call
+                        Sure Contact Us
                     </button>
 
             </section>

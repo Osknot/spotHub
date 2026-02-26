@@ -128,14 +128,14 @@ export const Navbar = () => {
                 {/* Right Section (Right) */}
                 <div className="flex items-center gap-4">
                   {/* Emoji (desktop only) */}
-                  <div className="hidden md:block">🥹</div>
+                  <div className="hidden md:block">🔵⚪️⬛️</div>
 
                   {/* Hamburger (mobile only) */}
                   <button
                     className="md:hidden text-2xl"
                     onClick={() => setIsOpen(!isOpen)}
                   >
-                    {isOpen ? "✖" : "🫳🏿"}
+                    {isOpen ? "👋🏻" : "✋🏻"}
                   </button>
                 </div>
               </div>

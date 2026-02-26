@@ -14,7 +14,7 @@
 
 
 import { motion } from 'framer-motion';
-
+import n8n from '../assets/n8nn.JPG'; // Placeholder image for n8n workflow visualization
 const automationServices = [
   { 
     title: "Intelligent Chatbots", 
@@ -110,57 +110,62 @@ export const AutomatePage = () => {
       </section>
 
       {/* UPGRADED CASE STUDY / CTA SECTION */}
-            <section className="relative py-32 px-6 overflow-hidden">
-            {/* Background Decor: A subtle glowing "spot" to anchor the brand name */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600/20 blur-[120px] rounded-full -z-10" />
-            
-            <div className="max-w-4xl mx-auto">
-                <motion.div 
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 30 }}
-                viewport={{ once: true }}
-                className="relative z-10 bg-[#0F1219]/50 backdrop-blur-xl border border-white/10 p-12 md:p-20 rounded-[3rem] text-center shadow-2xl"
-                >
-                <div className="inline-block px-4 py-1.5 mb-6 border border-blue-500/30 rounded-full bg-blue-500/10 text-blue-400 text-xs font-mono tracking-widest uppercase">
-                    Next Step
-                </div>
-                
-                <h3 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-                    Ready to see your <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                    ROI in action?
-                    </span>
-                </h3>
-                
-                <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-                    Let’s map out your existing workflows and identify exactly where AI can save you 20+ hours a week. No fluff, just logic.
-                </p>
+<section className="relative py-32 px-6 overflow-hidden">
+  {/* Background Decor */}
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600/20 blur-[120px] rounded-full -z-10" />
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <motion.button 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-colors shadow-lg shadow-blue-600/20"
-                    >
-                    Book a System Audit
-                    </motion.button>
-                    
-                    <button className="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all">
-                    View Case Studies
-                    </button>
-                </div>
+  <div className="max-w-4xl mx-auto">
+    <motion.div
+      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 30 }}
+      viewport={{ once: true }}
+      className="relative z-10 bg-[#0F1219]/50 backdrop-blur-xl border border-white/10 p-12 md:p-20 rounded-[3rem] text-center shadow-2xl"
+    >
+      <div className="inline-block px-4 py-1.5 mb-6 border border-blue-500/30 rounded-full bg-blue-500/10 text-blue-400 text-xs font-mono tracking-widest uppercase">
+        Next Step
+      </div>
 
-                {/* Subtle "Active System" Indicator */}
-                <div className="mt-12 flex items-center justify-center gap-2 text-gray-500 text-sm font-mono">
-                    <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                    </span>
-                    Systems Online: 24/7 Monitoring Active
-                </div>
-                </motion.div>
-            </div>
-            </section>
+      <h3 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+        Ready to see your <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+          Workflows in action?
+        </span>
+      </h3>
+
+      {/* n8n Workflow Image Placeholder */}
+      <div className="my-10 overflow-hidden rounded-xl border border-white/10 bg-black/20">
+        <img 
+          src={n8n} 
+          alt="n8n WhatsApp Chatbot Workflow" 
+          className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity"
+        />
+      </div>
+
+      <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+        Let’s map out your existing workflows and identify exactly where AI can save you 20+ hours a week. No fluff, just logic.
+      </p>
+
+      {/*<div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-colors shadow-lg shadow-blue-600/20"
+        >
+          Book a System Audit
+        </motion.button>
+      </div>*/}
+
+      {/* Updated "Active System" Indicator */}
+      <div className="mt-12 flex items-center justify-center gap-2 text-gray-500 text-sm font-mono">
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+        </span>
+        Workflow Status: Active & Monitoring 24/7
+      </div>
+    </motion.div>
+  </div>
+</section>
 
             {/* 4. THE TECH STACK STRIP */}
       <section className="py-20 border-t border-white/5 opacity-50 grayscale hover:grayscale-0 transition-all">

@@ -33,7 +33,7 @@ export const BuildPage = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-8">
-            Your very self comes out when we <span className="text-blue-500">hub</span> your spot.
+            Your very self comes out when we <span className="text-blue-500">hub/&gt;</span> your spot.
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
             This is where the magic becomes functional. We integrate your designs, 
