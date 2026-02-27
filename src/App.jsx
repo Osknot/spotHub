@@ -8,6 +8,7 @@ import { BuildPage } from './pages/Build'
 import { ContactPage } from './pages/Contact'
 import { AutomatePage } from './pages/Automate'
 import { Navbar } from './components/Navbar'
+import { NotFound } from './pages/NotFound'
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <Route path="/automate" element={<AutomatePage/>}/>
       <Route path="/build" element={<BuildPage/>}/>
       <Route path="/contact" element={<ContactPage/>}/>
+      {/* Catch all unmatched routes */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </>
   )
