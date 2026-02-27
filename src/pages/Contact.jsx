@@ -128,7 +128,7 @@ export const ContactForm =()=>{
 
             <textarea 
                 name="message" 
-                placeholder="Your Message..." 
+                placeholder="Your project description...(What do you want to build?)" 
                 value={formData.message}
                 rows={5}
                 onChange={handleChange}
@@ -175,7 +175,7 @@ export const ContactPage = () =>{
             <ContactCardPicture 
                 src={ini} 
                 name="Iniobong" 
-                about="Software Developer • AI Automations Specialist • Amongst others😉"
+                about="Think on normals • Engineer"
                 socialLinks={{ 
                     linkedin: "https://www.linkedin.com/in/iniobongoscar", 
                     twitter: "https://www.facebook.com/share/1GR21ik3i7/?mibextid=wwXIfr" 

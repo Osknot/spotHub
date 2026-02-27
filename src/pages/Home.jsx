@@ -1,20 +1,15 @@
-import essy from "../assets/automation.png";
-import growth from "../assets/growth.png";
-import creative from "../assets/creative.png";
+import essy from "../assets/automation.jpg";
+import growth from "../assets/growth.jpg";
+import creative from "../assets/creative.jpg";
 import { Footer } from "../components/Footer";
-import { ChevronDown } from "lucide-react"; // Import the icon
+import { ChevronDown } from "lucide-react"; 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 export const HomePage = () => {
     return (
-        <div className="relative min-h-screen pt-[90px] px-6 bg-[#0B0F19] text-[#F9FAFB] overflow-x-hidden">
-
-             {/* Global Background Glow
-             <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-                <div className="absolute inset-0 -z-10">
-                    <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[140px] rounded-full"></div>
-                </div>*/}
+    <div className="relative min-h-screen pt-[90px] px-6 bg-[#0B0F19] text-[#F9FAFB] overflow-x-hidden">
 
             <div className="relative z-10 max-w-5xl mx-auto text-center py-28 min-h-screen flex flex-col justify-center">
 
@@ -162,11 +157,11 @@ export const HomePage = () => {
                                 <p className="text-gray-400 mb-8">
                                     Let’s build something powerful together.
                                 </p>
-                                <button className="px-8 py-3 bg-blue-600 hover:bg-blue-500 transition rounded-xl font-semibold">
+                                <Link to="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-500 transition rounded-xl font-semibold">
                                     Start Your Project
-                                </button>
+                                </Link>
                             </section>
                 <Footer />  
-                </div>
-             );
-     }
+        </div>
+     );
+ }
