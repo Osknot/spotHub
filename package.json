@@ -1,6 +1,6 @@
 {
   "name": "spothub",
-  "homepage": "https://Osknot.github.io/spotHub",
+  "home": "https://Osknot.github.io/spotHub",
   "private": true,
   "version": "0.0.0",
   "type": "module",
