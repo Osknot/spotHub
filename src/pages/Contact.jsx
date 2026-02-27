@@ -1,5 +1,3 @@
-//import { ContactCardPicture } from "../components/ContactCardPicture";
-//import { ContactForm } from "../components/ContactFom";
 import { useState } from "react";
 import esse from "../assets/ese.JPG";
 import ini from "../assets/myself.png";

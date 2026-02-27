@@ -1,17 +1,3 @@
-/*export const BuildPage = ()=>{
-    return(
-        <div>
-            <h2>Your very self comes out when we hub your spot...</h2>
-            <section>
-                It shows everythin being put together, all things integrated into each other to actually become functional and work well for a business... example a business having all their design assets, website, and automation all working together seamlessly. this can be a really cool section to show the "magic" of how we bring everything together. we can have some interactive elements here, like a before-and-after slider to show the transformation, or maybe a dynamic flowchart that illustrates how all the pieces connect. and of course, this will be animated and visually engaging to really drive home the value of our services in creating a cohesive digital presence for our clients. a business that has its grahics, web design, and automation all working together seamlessly...this is where to show that.
-                You can use dummy data for that, then I will replace it with real ones
-                actual development...databases, CRMS, email systems, and all that good stuff
-            </section>
-        </div>
-    )
-}*/
-
-
 import { motion } from 'framer-motion';
 
 const integrations = [

@@ -1,19 +1,3 @@
-/*export const DesignPage = () => {
-    return(
-        <div>
-            <h2>Let's design your spot</h2>
-            <section>
-                this can have a lot of design related content, like a portfolio of designs, or a design tool, or something like that. we can brainstorm on this later..
-                different sections for different types of design services, like logo design, web design, etc. we can also have a section for design inspiration, where we showcase some of our favorite designs and trends in the industry. and this will be animated and interactive, of course, to make it more engaging for users.
-            </section>
-        </div>
-    )
-}*/
-
-
-
-
-
 import { motion } from 'framer-motion';
 import hos from "../assets/hos.JPG"; // Placeholder image for brand portfolio items
 import myport from "../assets/myport.JPG";

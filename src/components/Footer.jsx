@@ -1,5 +1,3 @@
-//import { FaFacebookF, FaLinkedinIn, FaInstagram, FaGithub, FaTiktok } from "react-icons/fa";
-
 export const Footer = ()=>{
     return(
         <footer className="mt-32 border-t border-[#1F2937] bg-[#0B0F19]">

@@ -1,18 +1,3 @@
-/*export const AutomatePage = () =>{
-    return(
-        <div>
-            <h2>Your business has to be more smart</h2>
-            <section>
-                This will display business related AI solved needs like chatbots, automated workflows...different sections for different types of automation services, like customer support, marketing automation, intelligent email routing etc. we can also have a section for automation inspiration, where we showcase some of our favorite automations and trends in the industry. and this will be animated and interactive, of course, to make it more engaging for users.
-                there could also be a section for case studies, where we show how we've helped businesses automate their processes and achieve their goals. this will help build trust and credibility with potential clients.
-                also a place to show what is possible with automation, like a demo or something, to really drive home the value of our services and get people excited about working with us...just a section with some cool automations that we've built, or that we can build, to show off our capabilities and get people inspired.
-            </section>
-        </div>
-    )
-}*/
-
-
-
 import { motion } from 'framer-motion';
 import n8n from '../assets/n8nn.JPG'; // Placeholder image for n8n workflow visualization
 const automationServices = [

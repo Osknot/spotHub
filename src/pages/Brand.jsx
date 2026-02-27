@@ -1,17 +1,3 @@
-/*export const BrandPage = () =>{
-    return(
-        <div>
-            <h2>Let's Brand your spot😉</h2>
-            <section>
-                This can have a lot of branding related content, like a portfolio of brands we've built, or a brand strategy tool, or something like that. we can brainstorm on this later..
-                different sections for different types of branding services, like brand strategy, visual identity, etc. we can also have a section for branding inspiration, where we showcase some of our favorite brands and trends in the industry. and this will be animated and interactive, of course, to make it more engaging for users.
-                just come up with some names of different brands and small visual descriptions for each one, to show off our capabilities and get people inspired....i will replace them with real ones later, but i can have like 4-5 different brands with different vibes, like a luxury brand, a tech startup, a lifestyle brand, etc. and each one can have a little blurb about the strategy behind it and the visual elements we created...use some dummy data for now. i will replace them with real ones later.
-            </section>
-        </div>
-    )
-}*/
-
-
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import farm from "../assets/farm.JPG"; // Placeholder image for brand portfolio items
