@@ -7,7 +7,7 @@ import ini from "../assets/iniobong.JPG";
 
 
 // Child component: CONTACT CARD PICTURE
-export const ContactCardPicture = ({src, name, about, socialLinks}) => {
+/*export const ContactCardPicture = ({src, name, about, socialLinks}) => {
     return(
          <div className="group bg-[#111827] border border-[#1F2937] rounded-2xl p-8 text-center transition duration-500 hover:-translate-y-3 hover:border-blue-500/40 hover:shadow-[0_0_40px_rgba(37,99,235,0.15)]">
 
@@ -52,6 +52,51 @@ export const ContactCardPicture = ({src, name, about, socialLinks}) => {
 
         </div>
     </div>
+    )*/
+
+    export const ContactCardPicture = ({src, name, about, socialLinks}) => {
+    return(
+         <div className="group bg-[#111827] border border-[#1F2937] rounded-2xl p-8 text-center transition-all duration-300 ease-out hover:-translate-y-2 hover:border-blue-500/50 transform-gpu will-change-transform">
+            
+            {/* Image Container - Using scale instead of complex filters */}
+            <div className="w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-[#1F2937] group-hover:border-blue-500/30 transition-colors duration-300">
+                <img 
+                    src={src} 
+                    alt={name} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 transform-gpu"
+                />
+            </div>
+
+            <h2 className="text-2xl font-semibold text-white">
+                Meet {name}
+            </h2>
+
+            <p className="mt-4 text-gray-400 leading-relaxed">
+                {about}
+            </p>
+
+            <div className="flex justify-center gap-6 mt-6">
+                {/* LinkedIn */}
+                <a 
+                    href={socialLinks?.linkedin || "#"}
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0B0F19] border border-[#1F2937] text-gray-400 hover:text-blue-400 hover:border-blue-500 transition-all duration-300"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    <i className="fab fa-linkedin-in"></i>
+                </a>
+
+                {/* Twitter/Facebook */}
+                <a 
+                    href={socialLinks?.twitter || "#"}
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0B0F19] border border-[#1F2937] text-gray-400 hover:text-blue-400 hover:border-blue-500 transition-all duration-300"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    <i className="fab fa-facebook"></i>
+                </a>
+            </div>
+        </div>
     )
 }
 
