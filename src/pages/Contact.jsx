@@ -1,6 +1,6 @@
 import { useState } from "react";
 import esse from "../assets/ese.JPG";
-import ini from "../assets/myself.png";
+import ini from "../assets/iniobong.JPG";
 
 
 //import { Footer } from "../components/Footer";
